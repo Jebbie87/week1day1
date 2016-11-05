@@ -1,16 +1,13 @@
-//var change = "hello";
-var test = process.argv.slice(2);
-console.log(test);
-
 function reverse(word){
-  var arr = "";
-  var arr2 = [];
-  //for (var j = 0; j < word.length; j++){
-    for (var i = word.length - 1; i >= 0; i--) {
-        arr += word[i];
+var reversedWord = ""
+ for (var i = 2; i < word.length; i++){
+    var firstWord = word[i]
+    for (var j = firstWord.length - 1; j >= 0; j--){
+      reversedWord += firstWord[j]
     }
-
-  return arr;
+    reversedWord += '\n'
+  }
+  return reversedWord
 }
 
-console.log(reverse(test));
+console.log(reverse(process.argv));
